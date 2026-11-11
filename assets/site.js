@@ -13,7 +13,10 @@
       toc: "Содержание",
       backToTop: "Наверх",
       footerNote: "Данные остаются на устройстве.",
-      skip: "К содержанию"
+      skip: "К содержанию",
+      exercises: "Упражнения",
+      programs: "Программы",
+      tbf: "TBF"
     },
     en: {
       privacy: "Privacy policy",
@@ -22,7 +25,10 @@
       toc: "Contents",
       backToTop: "Back to top",
       footerNote: "Your data stays on your device.",
-      skip: "Skip to content"
+      skip: "Skip to content",
+      exercises: "Exercises",
+      programs: "Programs",
+      tbf: "TBF"
     },
     es: {
       privacy: "Política de privacidad",
@@ -31,7 +37,10 @@
       toc: "Contenido",
       backToTop: "Volver arriba",
       footerNote: "Tus datos permanecen en tu dispositivo.",
-      skip: "Ir al contenido"
+      skip: "Ir al contenido",
+      exercises: "Ejercicios",
+      programs: "Programas",
+      tbf: "TBF"
     },
     cn: {
       privacy: "隐私政策",
@@ -40,7 +49,10 @@
       toc: "目录",
       backToTop: "返回顶部",
       footerNote: "数据保存在您的设备上。",
-      skip: "跳到正文"
+      skip: "跳到正文",
+      exercises: "动作",
+      programs: "训练计划",
+      tbf: "TBF"
     }
   };
 
@@ -247,6 +259,17 @@
 
   Array.prototype.forEach.call(document.querySelectorAll("[data-current-year]"), function (node) {
     node.textContent = String(new Date().getFullYear());
+  });
+
+  // Каталог открывает TBF-файл в приложении; без JS ссылка остаётся на файл.
+  Array.prototype.forEach.call(document.querySelectorAll("[data-tbf-open]"), function (link) {
+    try {
+      var file = new URL(link.getAttribute("data-tbf-open"), window.location.href).href;
+      link.href = "twinbells://import?url=" + encodeURIComponent(file);
+      link.setAttribute("rel", "nofollow");
+    } catch (error) {
+      // Оставляем обычную ссылку на файл.
+    }
   });
 
   window.addEventListener("scroll", updateActiveToc, { passive: true });

@@ -1,0 +1,33 @@
+name: TBF validation
+
+on:
+  push:
+    paths:
+      - "tbf/**"
+      - "registry/**"
+      - ".github/workflows/tbf.yml"
+  pull_request:
+    paths:
+      - "tbf/**"
+      - "registry/**"
+      - ".github/workflows/tbf.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install validator dependencies
+        run: pip install -r tbf/validators/requirements.txt
+      - name: Validate examples and registry
+        run: |
+          python3 tbf/validators/validate.py \
+            tbf/examples \
+            registry/exercises \
+            registry/metrics \
+            registry/programs
+      - name: Build registry index
+        run: python3 tbf/scripts/build_registry.py

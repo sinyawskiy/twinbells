@@ -1,0 +1,56 @@
+{
+  "tbf": "1.0",
+  "documentId": "00000000-0000-4000-8000-000000000006",
+  "createdAt": "2026-11-11T12:00:00Z",
+  "generator": {
+    "name": "TwinBells",
+    "version": "1.0.0"
+  },
+  "root": {
+    "type": "exercise",
+    "id": "6c7d8e9f-3333-4444-8555-666677778888"
+  },
+  "objects": [
+    {
+      "type": "metric",
+      "id": "org.twinbells.metric.weight",
+      "name": "Вес",
+      "language": "ru",
+      "kind": "number",
+      "unit": "kg",
+      "loadRole": "weight",
+      "checksum": "sha256:dff3ef40609b185843b7677a952212f9030634daa070adf67906a9af5c7a1649"
+    },
+    {
+      "type": "metric",
+      "id": "org.twinbells.metric.repetitions",
+      "name": "Повторения",
+      "language": "ru",
+      "kind": "number",
+      "unit": "повт.",
+      "loadRole": "reps",
+      "checksum": "sha256:0786e59e627f6a8ea28adf433f8b082d03860a4b907eca6be2b84e56c8ff1ee4"
+    },
+    {
+      "type": "exercise",
+      "id": "6c7d8e9f-3333-4444-8555-666677778888",
+      "name": "Становая тяга",
+      "description": "Базовое упражнение для спины, ягодиц и задней поверхности бедра.",
+      "language": "ru",
+      "restSeconds": 120,
+      "metrics": [
+        {
+          "metric": "org.twinbells.metric.weight",
+          "position": 0,
+          "required": true
+        },
+        {
+          "metric": "org.twinbells.metric.repetitions",
+          "position": 1,
+          "required": true
+        }
+      ],
+      "checksum": "sha256:49843398cf991ca0621872dc6cbea1a6e31f4c8db849606916fbe1dc56ccd4ce"
+    }
+  ]
+}

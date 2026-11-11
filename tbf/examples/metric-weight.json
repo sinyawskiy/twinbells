@@ -1,0 +1,26 @@
+{
+  "tbf": "1.0",
+  "documentId": "00000000-0000-4000-8000-000000000001",
+  "createdAt": "2026-11-11T12:00:00Z",
+  "generator": {
+    "name": "TwinBells",
+    "version": "1.0.0"
+  },
+  "root": {
+    "type": "metric",
+    "id": "org.twinbells.metric.weight"
+  },
+  "objects": [
+    {
+      "type": "metric",
+      "id": "org.twinbells.metric.weight",
+      "name": "Вес",
+      "language": "ru",
+      "kind": "number",
+      "unit": "kg",
+      "loadRole": "weight",
+      "archived": false,
+      "checksum": "sha256:dff3ef40609b185843b7677a952212f9030634daa070adf67906a9af5c7a1649"
+    }
+  ]
+}

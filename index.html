@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TwinBells — офлайн-дневник силовых тренировок. Политика конфиденциальности, описание приложения и открытый формат TBF.">
+  <title>TwinBells</title>
+  <link rel="icon" href="images/icon_option_1.png">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/icon_option_1.png" alt="" width="44" height="44">
+        <span>TwinBells</span>
+      </a>
+      <nav class="page-nav" aria-label="TwinBells">
+        <a href="privacy.html">Политика конфиденциальности</a>
+        <a href="description.html">Описание приложения</a>
+        <a href="exercises.html">Упражнения</a>
+        <a href="programs.html">Программы</a>
+        <a href="tbf/index.html">TBF</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <header class="page-header">
+      <p class="eyebrow">TwinBells</p>
+      <h1>Дневник силовых тренировок</h1>
+      <p class="lead">TwinBells работает офлайн, не требует аккаунта и хранит данные только на вашем устройстве. Здесь собраны документы приложения, открытая библиотека и спецификация формата TBF.</p>
+    </header>
+
+    <div class="section-grid">
+      <a class="section-card" href="privacy.html">
+        <strong>Политика конфиденциальности</strong>
+        <span>Как приложение относится к данным пользователя. Доступно на четырёх языках.</span>
+      </a>
+      <a class="section-card" href="description.html">
+        <strong>Описание приложения</strong>
+        <span>Возможности TwinBells: программы, суперсеты, тоннаж, статистика и замеры тела.</span>
+      </a>
+      <a class="section-card" href="exercises.html">
+        <strong>Упражнения</strong>
+        <span>Открытая библиотека упражнений в формате TBF.</span>
+      </a>
+      <a class="section-card" href="programs.html">
+        <strong>Программы</strong>
+        <span>Готовые тренировочные программы вместе с зависимостями.</span>
+      </a>
+      <a class="section-card" href="tbf/index.html">
+        <strong>TwinBells Format</strong>
+        <span>Открытый JSON-формат, JSON Schema, примеры и валидатор.</span>
+      </a>
+    </div>
+
+    <div class="note">
+      <p>TwinBells не отправляет тренировочные данные на серверы. Резервные копии создаются локально, а публичная библиотека содержит только упражнения и программы, но не личные журналы.</p>
+    </div>
+
+    <h2>Открытый формат</h2>
+    <p>TBF позволяет атомарно переносить метрику, упражнение, программу или журнал истории тренировок. Формат не зависит от TwinBells и может быть реализован в любом приложении.</p>
+    <p><a class="description-link" href="tbf/index.html">Перейти к TwinBells Format →</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span data-current-year>2026</span> TwinBells</span>
+      <span class="spacer"></span>
+      <a href="privacy.html">Политика конфиденциальности</a>
+      <a href="description.html">Описание приложения</a>
+      <a href="tbf/index.html">TBF</a>
+      <button class="linklike" type="button" data-scroll-top>Наверх</button>
+    </div>
+  </footer>
+
+  <script src="assets/site.js"></script>
+</body>
+</html>

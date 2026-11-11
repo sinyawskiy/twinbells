@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TwinBells Format (TBF) — открытый JSON-формат для переноса упражнений, метрик, программ и истории тренировок.">
+  <title>TwinBells Format — TwinBells</title>
+  <link rel="icon" href="../images/icon_option_1.png">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../index.html">
+        <img src="../images/icon_option_1.png" alt="" width="44" height="44">
+        <span>TwinBells</span>
+      </a>
+      <nav class="page-nav" aria-label="TwinBells">
+        <a href="../privacy.html">Политика конфиденциальности</a>
+        <a href="../description.html">Описание приложения</a>
+        <a href="../exercises.html">Упражнения</a>
+        <a href="../programs.html">Программы</a>
+        <a href="index.html" aria-current="page">TBF</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <header class="page-header">
+      <p class="eyebrow">Открытый формат</p>
+      <h1>TwinBells Format</h1>
+      <p class="lead">TBF — открытый JSON-формат для переноса упражнений, метрик, программ и истории тренировок между приложениями. Формат не зависит от Android, Room или внутренней модели базы TwinBells.</p>
+    </header>
+
+    <div class="chip-row">
+      <span class="chip">TBF 1.0</span>
+      <span class="chip">JSON Schema</span>
+      <span class="chip">SHA-256 checksums</span>
+      <span class="chip">CC0</span>
+    </div>
+
+    <h2>Зачем нужен TBF</h2>
+    <p>TwinBells хранит данные локально и не требует аккаунта. TBF позволяет выгрузить один объект вместе с его зависимостями и передать его другому человеку, тренеру или в другое приложение.</p>
+    <ul>
+      <li><strong>Метрика</strong> — определение показателя: вес, повторения, время, дистанция.</li>
+      <li><strong>Упражнение</strong> — карточка упражнения и его метрики.</li>
+      <li><strong>Программа</strong> — программа тренировок, упражнения, метрики и суперсеты.</li>
+      <li><strong>Журнал</strong> — история тренировок и замеры тела.</li>
+    </ul>
+
+    <h2>Сценарий «тренер и клиент»</h2>
+    <p>Обмен работает без облака, аккаунта и сервера. Файлы передаются любым удобным способом: в мессенджере, по почте, через файлообменник или USB.</p>
+    <ol>
+      <li><strong>Тренер</strong> экспортирует программу: «Программы» → <code>⋮</code> → «Экспорт в TBF».</li>
+      <li><strong>Клиент</strong> импортирует файл через настройки или открывает ссылку «Открыть в TwinBells». Программа попадает в общую библиотеку приложения.</li>
+      <li><strong>Клиент</strong> тренируется по программе и экспортирует журнал: «Дневники» → <code>⋮</code> → «Экспорт в TBF».</li>
+      <li><strong>Тренер</strong> импортирует журнал. Он создаётся отдельным дневником, существующие данные не меняются.</li>
+    </ol>
+    <p>Программы общие для всех дневников. История тренировок, подходы и замеры тела принадлежат конкретному дневнику. Журнал не содержит программ: если тренеру нужна программа клиента, её можно создать из любой завершённой тренировки в импортированном журнале.</p>
+    <div class="note">
+      <p><strong>Приватность:</strong> журнал содержит имя, заметки, историю тренировок и замеры тела. Отправляйте его только тому, кому доверяете. Повторный импорт того же файла не создаёт копий.</p>
+    </div>
+
+    <h2>Документы и примеры</h2>
+    <div class="section-grid">
+      <a class="section-card" href="spec/1.0/README.md">
+        <strong>Спецификация 1.0</strong>
+        <span>Правила объектов, ссылок, версий и импорта.</span>
+      </a>
+      <a class="section-card" href="schema/1.0/document.schema.json">
+        <strong>JSON Schema</strong>
+        <span>Машиночитаемая схема документа TBF 1.0.</span>
+      </a>
+      <a class="section-card" href="examples/metric-weight.json">
+        <strong>Метрика</strong>
+        <span>Пример самостоятельного объекта metric.</span>
+      </a>
+      <a class="section-card" href="examples/exercise-squat.json">
+        <strong>Упражнение</strong>
+        <span>Приседания вместе с метриками веса и повторений.</span>
+      </a>
+      <a class="section-card" href="examples/program-strength-5x5.json">
+        <strong>Программа</strong>
+        <span>Сила 5×5 с тремя упражнениями и зависимостями.</span>
+      </a>
+      <a class="section-card" href="examples/journal-minimal.json">
+        <strong>Журнал</strong>
+        <span>История тренировки, подходы и замеры тела.</span>
+      </a>
+    </div>
+
+    <div class="catalog-links">
+      <a href="examples/exercise-squat.json" data-tbf-open="examples/exercise-squat.json">Открыть упражнение в TwinBells</a>
+      <a href="examples/program-strength-5x5.json" data-tbf-open="examples/program-strength-5x5.json">Открыть программу в TwinBells</a>
+    </div>
+
+    <h2>Как читать TBF</h2>
+    <p>Каждый файл — один документ с корневым объектом и всеми зависимостями. Импортер проверяет версию, схему, ссылки и checksum каждого объекта, строит план импорта и применяет его одной транзакцией.</p>
+    <p>Checksum считается по смысловому содержимому объекта. Одинаковые объекты не дублируются: если checksum уже есть в базе, объект используется повторно; если отличается — добавляется новый.</p>
+
+    <div class="note">
+      <p><strong>Важно:</strong> TwinBells не требуется для чтения TBF. Любое приложение может реализовать импорт по спецификации и JSON Schema.</p>
+    </div>
+
+    <h2>Проверка файлов</h2>
+    <p>Валидатор проверяет схему, ссылки и checksums:</p>
+    <pre><code>python3 tbf/validators/validate.py tbf/examples</code></pre>
+    <p><a href="validators/README.md">Инструкция по валидатору</a> · <a href="../TBF_PLAN.md">План развития формата</a></p>
+
+    <h2>Лицензия</h2>
+    <p>Спецификация и JSON Schema публикуются под CC0-1.0. Код валидаторов — MIT. Названия, описания и инструкции упражнений в публичном каталоге должны быть созданы самостоятельно или предоставлены авторами на совместимых условиях.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span data-current-year>2026</span> TwinBells</span>
+      <span class="spacer"></span>
+      <a href="../privacy.html">Политика конфиденциальности</a>
+      <a href="../description.html">Описание приложения</a>
+      <a href="../exercises.html">Упражнения</a>
+      <a href="../programs.html">Программы</a>
+      <button class="linklike" type="button" data-scroll-top>Наверх</button>
+    </div>
+  </footer>
+
+  <script src="../assets/site.js"></script>
+</body>
+</html>

@@ -20,3 +20,7 @@ _site/
 
 # Node tooling, if used for local checks
 node_modules/
+
+# Python tooling
+__pycache__/
+*.pyc

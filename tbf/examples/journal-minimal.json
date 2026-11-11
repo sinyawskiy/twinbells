@@ -1,0 +1,142 @@
+{
+  "tbf": "1.0",
+  "documentId": "00000000-0000-4000-8000-000000000004",
+  "createdAt": "2026-11-11T12:00:00Z",
+  "generator": {
+    "name": "TwinBells",
+    "version": "1.0.0"
+  },
+  "root": {
+    "type": "journal",
+    "id": "d1e2f3a4-3333-4444-8555-666677778888"
+  },
+  "objects": [
+    {
+      "type": "metric",
+      "id": "org.twinbells.metric.weight",
+      "name": "Вес",
+      "language": "ru",
+      "kind": "number",
+      "unit": "kg",
+      "loadRole": "weight",
+      "checksum": "sha256:dff3ef40609b185843b7677a952212f9030634daa070adf67906a9af5c7a1649"
+    },
+    {
+      "type": "metric",
+      "id": "org.twinbells.metric.repetitions",
+      "name": "Повторения",
+      "language": "ru",
+      "kind": "number",
+      "unit": "повт.",
+      "loadRole": "reps",
+      "checksum": "sha256:0786e59e627f6a8ea28adf433f8b082d03860a4b907eca6be2b84e56c8ff1ee4"
+    },
+    {
+      "type": "exercise",
+      "id": "4a5d6e7f-1111-4222-8333-444455556666",
+      "name": "Приседания",
+      "description": "Базовое упражнение для ног и ягодиц.",
+      "language": "ru",
+      "restSeconds": 120,
+      "metrics": [
+        {
+          "metric": "org.twinbells.metric.weight",
+          "position": 0,
+          "required": true
+        },
+        {
+          "metric": "org.twinbells.metric.repetitions",
+          "position": 1,
+          "required": true
+        }
+      ],
+      "checksum": "sha256:3020a184be30ae0e777019f856f241929682cf5c5122d6257f06abbcbc5ec193"
+    },
+    {
+      "type": "journal",
+      "id": "d1e2f3a4-3333-4444-8555-666677778888",
+      "title": "Мои тренировки",
+      "personName": "Алексей",
+      "language": "ru",
+      "workouts": [
+        {
+          "id": "a1b2c3d4-5555-4666-8777-888899990000",
+          "title": "Сила 5×5 1",
+          "startedAt": "2026-11-10T18:30:00Z",
+          "endedAt": "2026-11-10T19:30:00Z",
+          "status": "completed",
+          "notes": "",
+          "restBetweenExercisesSeconds": 90,
+          "exercises": [
+            {
+              "exercise": "4a5d6e7f-1111-4222-8333-444455556666",
+              "position": 0,
+              "notes": "",
+              "plannedSetCount": 5,
+              "groupKey": null,
+              "groupPosition": 0,
+              "groupRounds": 1,
+              "groupOrderMode": "sequential",
+              "sets": [
+                {
+                  "setNumber": 1,
+                  "recordedAt": "2026-11-10T18:35:00Z",
+                  "notes": "",
+                  "completed": true,
+                  "values": [
+                    {
+                      "metric": "org.twinbells.metric.weight",
+                      "value": "80",
+                      "metricNameSnapshot": "Вес",
+                      "unitSnapshot": "kg",
+                      "loadRoleSnapshot": "weight"
+                    },
+                    {
+                      "metric": "org.twinbells.metric.repetitions",
+                      "value": "5",
+                      "metricNameSnapshot": "Повторения",
+                      "unitSnapshot": "повт.",
+                      "loadRoleSnapshot": "reps"
+                    }
+                  ]
+                }
+              ],
+              "slots": [
+                {
+                  "roundNumber": 1,
+                  "positionInRound": 0,
+                  "sequencePosition": 0,
+                  "status": "completed",
+                  "setNumber": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "measurements": {
+        "types": [
+          {
+            "id": "b9c8d7e6-7777-4888-8999-000011112222",
+            "name": "Вес",
+            "unit": "kg",
+            "archived": false
+          }
+        ],
+        "days": [
+          {
+            "measuredAt": "2026-11-10T08:00:00Z",
+            "notes": "Утро",
+            "values": [
+              {
+                "type": "b9c8d7e6-7777-4888-8999-000011112222",
+                "value": "80.5"
+              }
+            ]
+          }
+        ]
+      },
+      "checksum": "sha256:e1c9e0fabdc662881f084074d6b0077cfe1075605a4f12dac0739d283a116ded"
+    }
+  ]
+}

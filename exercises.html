@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Каталог упражнений TwinBells в открытом формате TBF: приседания, жим лёжа, становая тяга.">
+  <title>Упражнения — TwinBells</title>
+  <link rel="icon" href="images/icon_option_1.png">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/icon_option_1.png" alt="" width="44" height="44">
+        <span>TwinBells</span>
+      </a>
+      <nav class="page-nav" aria-label="TwinBells">
+        <a href="privacy.html">Политика конфиденциальности</a>
+        <a href="description.html">Описание приложения</a>
+        <a href="exercises.html" aria-current="page">Упражнения</a>
+        <a href="programs.html">Программы</a>
+        <a href="tbf/index.html">TBF</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <header class="page-header">
+      <p class="eyebrow">Открытая библиотека</p>
+      <h1>Упражнения</h1>
+      <p class="lead">Упражнения в формате TwinBells Format. Каждый файл самодостаточен: он содержит упражнение и используемые метрики. Такие файлы можно импортировать в TwinBells или любое другое приложение, поддерживающее TBF.</p>
+    </header>
+
+    <div class="note">
+      <p>Библиотека будет пополняться. Добавить упражнение можно через Pull Request: файл должен проходить проверку JSON Schema, ссылочной целостности и checksum.</p>
+    </div>
+
+    <div class="catalog-grid">
+      <article class="catalog-card">
+        <h2>Приседания</h2>
+        <p>Базовое упражнение для ног и ягодиц. Метрики: вес и повторения.</p>
+        <div class="catalog-links">
+          <a href="tbf/examples/exercise-squat.json" download>Скачать TBF</a>
+          <a href="tbf/examples/exercise-squat.json" data-tbf-open="tbf/examples/exercise-squat.json">Открыть в TwinBells</a>
+          <a href="tbf/index.html">О формате</a>
+        </div>
+      </article>
+
+      <article class="catalog-card">
+        <h2>Жим лёжа</h2>
+        <p>Базовое упражнение для груди, трицепсов и передних дельт.</p>
+        <div class="catalog-links">
+          <a href="tbf/examples/exercise-bench-press.json" download>Скачать TBF</a>
+          <a href="tbf/examples/exercise-bench-press.json" data-tbf-open="tbf/examples/exercise-bench-press.json">Открыть в TwinBells</a>
+          <a href="tbf/index.html">О формате</a>
+        </div>
+      </article>
+
+      <article class="catalog-card">
+        <h2>Становая тяга</h2>
+        <p>Базовое упражнение для спины, ягодиц и задней поверхности бедра.</p>
+        <div class="catalog-links">
+          <a href="tbf/examples/exercise-deadlift.json" download>Скачать TBF</a>
+          <a href="tbf/examples/exercise-deadlift.json" data-tbf-open="tbf/examples/exercise-deadlift.json">Открыть в TwinBells</a>
+          <a href="tbf/index.html">О формате</a>
+        </div>
+      </article>
+    </div>
+
+    <h2>Как использовать</h2>
+    <p>Скачайте `.json`-файл и импортируйте его в приложение. TwinBells проверит формат, зависимости и checksum, затем покажет предпросмотр перед добавлением данных.</p>
+    <p><a class="description-link" href="tbf/index.html">Перейти к описанию TBF →</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span data-current-year>2026</span> TwinBells</span>
+      <span class="spacer"></span>
+      <a href="privacy.html">Политика конфиденциальности</a>
+      <a href="programs.html">Программы</a>
+      <button class="linklike" type="button" data-scroll-top>Наверх</button>
+    </div>
+  </footer>
+
+  <script src="assets/site.js"></script>
+</body>
+</html>

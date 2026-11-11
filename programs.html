@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Каталог программ тренировок TwinBells в открытом формате TBF.">
+  <title>Программы — TwinBells</title>
+  <link rel="icon" href="images/icon_option_1.png">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/icon_option_1.png" alt="" width="44" height="44">
+        <span>TwinBells</span>
+      </a>
+      <nav class="page-nav" aria-label="TwinBells">
+        <a href="privacy.html">Политика конфиденциальности</a>
+        <a href="description.html">Описание приложения</a>
+        <a href="exercises.html">Упражнения</a>
+        <a href="programs.html" aria-current="page">Программы</a>
+        <a href="tbf/index.html">TBF</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <header class="page-header">
+      <p class="eyebrow">Открытая библиотека</p>
+      <h1>Программы</h1>
+      <p class="lead">Готовые программы тренировок в формате TBF. Программа переносится вместе с упражнениями, метриками и настройками суперсетов, поэтому её можно импортировать в чистую базу.</p>
+    </header>
+
+    <div class="note">
+      <p>Программы в TBF не привязаны к конкретному дневнику. Импорт добавляет программу в общую базу, а история тренировок остаётся личной.</p>
+    </div>
+
+    <div class="catalog-grid">
+      <article class="catalog-card">
+        <h2>Сила 5×5</h2>
+        <p>Три базовых упражнения: приседания, жим лёжа и становая тяга. Пять подходов по пять повторений.</p>
+        <div class="chip-row">
+          <span class="chip">3 упражнения</span>
+          <span class="chip">Силовая</span>
+        </div>
+        <div class="catalog-links">
+          <a href="tbf/examples/program-strength-5x5.json" download>Скачать TBF</a>
+          <a href="tbf/examples/program-strength-5x5.json" data-tbf-open="tbf/examples/program-strength-5x5.json">Открыть в TwinBells</a>
+          <a href="tbf/index.html">О формате</a>
+        </div>
+      </article>
+    </div>
+
+    <h2>Как использовать</h2>
+    <p>Скачайте файл и импортируйте его в TwinBells. Если упражнение или метрика уже есть в базе, приложение не создаст дубликат: объект будет найден по checksum.</p>
+    <p><a class="description-link" href="tbf/index.html">Перейти к описанию TBF →</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span data-current-year>2026</span> TwinBells</span>
+      <span class="spacer"></span>
+      <a href="privacy.html">Политика конфиденциальности</a>
+      <a href="exercises.html">Упражнения</a>
+      <button class="linklike" type="button" data-scroll-top>Наверх</button>
+    </div>
+  </footer>
+
+  <script src="assets/site.js"></script>
+</body>
+</html>

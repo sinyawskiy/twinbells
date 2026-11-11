@@ -1,0 +1,56 @@
+{
+  "tbf": "1.0",
+  "documentId": "00000000-0000-4000-8000-000000000002",
+  "createdAt": "2026-11-11T12:00:00Z",
+  "generator": {
+    "name": "TwinBells",
+    "version": "1.0.0"
+  },
+  "root": {
+    "type": "exercise",
+    "id": "4a5d6e7f-1111-4222-8333-444455556666"
+  },
+  "objects": [
+    {
+      "type": "metric",
+      "id": "org.twinbells.metric.weight",
+      "name": "Вес",
+      "language": "ru",
+      "kind": "number",
+      "unit": "kg",
+      "loadRole": "weight",
+      "checksum": "sha256:dff3ef40609b185843b7677a952212f9030634daa070adf67906a9af5c7a1649"
+    },
+    {
+      "type": "metric",
+      "id": "org.twinbells.metric.repetitions",
+      "name": "Повторения",
+      "language": "ru",
+      "kind": "number",
+      "unit": "повт.",
+      "loadRole": "reps",
+      "checksum": "sha256:0786e59e627f6a8ea28adf433f8b082d03860a4b907eca6be2b84e56c8ff1ee4"
+    },
+    {
+      "type": "exercise",
+      "id": "4a5d6e7f-1111-4222-8333-444455556666",
+      "name": "Приседания",
+      "description": "Базовое упражнение для ног и ягодиц. Спина прямая, колени движутся по направлению носков.",
+      "language": "ru",
+      "restSeconds": 120,
+      "metrics": [
+        {
+          "metric": "org.twinbells.metric.weight",
+          "position": 0,
+          "required": true
+        },
+        {
+          "metric": "org.twinbells.metric.repetitions",
+          "position": 1,
+          "required": true
+        }
+      ],
+      "checksum": "sha256:e13ae6384c7b3f561b1ae0074cf125e5d5458065a03333e44d7340073187d362"
+    }
+  ]
+}
