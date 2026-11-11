@@ -1,0 +1,22 @@
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# macOS / Windows
+.DS_Store
+Thumbs.db
+
+# Local logs and environment files
+*.log
+.env
+.env.*
+
+# GitHub Pages / Jekyll build artifacts
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Node tooling, if used for local checks
+node_modules/
